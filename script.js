@@ -134,6 +134,7 @@
     const curtain = $('#curtain');
     const btn = $('#curtainBtn');
     const namesEl = $('#curtainNames');
+    const bgm = $('#bgm');
 
     if (CONFIG.useCurtain === false) {
       curtain.style.display = 'none';
@@ -144,6 +145,9 @@
     namesEl.textContent = `${CONFIG.groom.name}  &  ${CONFIG.bride.name}`;
 
     btn.addEventListener('click', () => {
+      if (bgm) {
+        bgm.play().catch(() => {});
+      }
       curtain.classList.add('is-open');
       document.body.classList.remove('no-scroll');
       setTimeout(() => {
