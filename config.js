@@ -61,7 +61,6 @@ const CONFIG = {
     kakao: "https://map.kakao.com/",
     naver: "https://map.naver.com/"
   },
-
   // ── 6. 마음 전하실 곳 ──
   accounts: {
     groom: [
