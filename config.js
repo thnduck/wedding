@@ -18,30 +18,30 @@ const CONFIG = {
 
   // ── 2. 메인 (히어로) ──
   groom: {
-    name: "신랑",
-    nameEn: "Groom",
-    father: "아버지",
-    mother: "어머니",
+    name: "서은덕",
+    nameEn: "서은덕",
+    father: "서동현",
+    mother: "김혜숙",
     fatherDeceased: false,
     motherDeceased: false
   },
 
   bride: {
-    name: "신부",
-    nameEn: "Bride",
-    father: "아버지",
-    mother: "어머니",
+    name: "정세은",
+    nameEn: "정세은",
+    father: "정재복",
+    mother: "김지영",
     fatherDeceased: false,
     motherDeceased: false
   },
 
   wedding: {
-    date: "2026-05-09",
+    date: "2026-07-04",
     time: "13:00",
-    venue: "예식장 이름",
-    hall: "그랜드홀 5층",
-    address: "서울특별시 강남구 테헤란로 123",
-    tel: "02-1234-5678"
+    venue: "라비에벨웨딩홀",
+    hall: "2층",
+    address: "대전 서구 계백로 1108",
+    tel: "0507-1479-6868",
   },
 
   // ── 3. 인사말 ──
@@ -57,9 +57,31 @@ const CONFIG = {
   },
 
   // ── 5. 오시는 길 ──
-  mapLinks: {
-    kakao: "https://map.kakao.com/",
-    naver: "https://map.naver.com/"
+    mapLinks: {
+      kakao: "https://place.map.kakao.com/1121045343",
+      naver: "https://map.naver.com/p/search/%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8%EC%9B%A8%EB%94%A9%ED%99%80%20%EB%8C%80%EC%A0%84/place/1192910552?c=15.00,0,0,0,dh&placePath=/home?bk_query=%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8%EC%9B%A8%EB%94%A9%ED%99%80%20%EB%8C%80%EC%A0%84&entry=pll&from=map&fromPanelNum=2&timestamp=202603292123&locale=ko&svcName=map_pcv5&searchText=%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8%EC%9B%A8%EB%94%A9%ED%99%80%20%EB%8C%80%EC%A0%84"
+    },
+  transport: {
+    title: "교통 안내",
+    sections: [
+      {
+        heading: "대중교통 이용",
+        items: [
+          "대전역: 201번, 202번 탑승 후 동방고등학교 하차 (건너편)",
+          "대전역 / 역전시장: 급행1, 급행2002, 20번 탑승 후 가수원육교, 가수원시장 하차 (도보 600m)",
+          "대전복합터미널: 201번 탑승 후 동방고등학교 하차 (건너편)",
+          "유성고속터미널: 114번 탑승 후 동방고등학교 하차 (건너편)",
+          "동방고등학교 경유 노선: 114번, 212번, 216번, 43번, 46번, 2002번, 47-1번"
+        ]
+      },
+      {
+        heading: "고속도로 이용",
+        items: [
+          "하행선: 서울 출발 > 경부고속도로 > 유성분기점 > 호남고속도로 > 서대전분기점 > 남부순환고속도로 서대전IC > 라비에벨웨딩홀",
+          "상행선: 부산 출발 > 경부고속도로 > 비룡분기점 > 산내분기점 > 남부순환고속도로 > 서대전IC > 라비에벨웨딩홀"
+        ]
+      }
+    ]
   },
   // ── 6. 마음 전하실 곳 ──
   accounts: {
@@ -77,7 +99,7 @@ const CONFIG = {
 
   // ── 링크 공유 시 나타나는 문구 ──
   meta: {
-    title: "신랑 ♥ 신부 결혼합니다",
-    description: "2026년 5월 9일, 소중한 분들을 초대합니다."
+    title: "서은덕 ♥ 정세은 결혼합니다",
+    description: "2026년 7월 4일, 소중한 분들을 초대합니다."
   }
 };

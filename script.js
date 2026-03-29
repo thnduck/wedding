@@ -581,11 +581,37 @@
   function initLocation() {
     const w = CONFIG.wedding;
     const ml = CONFIG.mapLinks;
+    const transport = CONFIG.transport;
     $('#locationVenue').textContent = w.venue;
     $('#locationHall').textContent = w.hall;
     $('#locationAddress').textContent = w.address;
     $('#locationTel').textContent = w.tel ? `Tel. ${w.tel}` : '';
     $('#locationMapImg').src = 'images/location/1.jpg';
+    const transportEl = $('#locationTransport');
+    if (transportEl) {
+      if (transport && Array.isArray(transport.sections) && transport.sections.length > 0) {
+        const title = transport.title ? `<p class="location__transport-title">${transport.title}</p>` : '';
+        const sections = transport.sections.map((section) => {
+          const heading = section.heading ? `<p class="location__transport-heading">${section.heading}</p>` : '';
+          const items = Array.isArray(section.items)
+            ? section.items.map((item) => `<li class="location__transport-item">${item}</li>`).join('')
+            : '';
+          return `
+            <div class="location__transport-section">
+              ${heading}
+              <ul class="location__transport-list">${items}</ul>
+            </div>
+          `;
+        }).join('');
+        transportEl.innerHTML = `${title}${sections}`;
+      } else if (transport && Array.isArray(transport.lines) && transport.lines.length > 0) {
+        const title = transport.title ? `<p class="location__transport-title">${transport.title}</p>` : '';
+        const lines = transport.lines.map((line) => `<p class="location__transport-line">${line}</p>`).join('');
+        transportEl.innerHTML = `${title}${lines}`;
+      } else {
+        transportEl.style.display = 'none';
+      }
+    }
     $('#kakaoMapBtn').href = ml.kakao || '#';
     $('#naverMapBtn').href = ml.naver || '#';
 
