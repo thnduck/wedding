@@ -1,5 +1,5 @@
 /**
- * Watercolor Soft Wedding Invitation Configuration
+ * Wedding Invitation Configuration
  *
  * 이 파일에서 청첩장의 모든 정보를 수정할 수 있습니다.
  * 이미지는 설정이 필요 없습니다. 아래 폴더에 순번 파일명으로 넣으면 자동 감지됩니다.
@@ -13,56 +13,57 @@
  */
 
 const CONFIG = {
-  // ── 1. 초대장 열기 ──
-  useCurtain: true,  // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
+  // ── 초대장 열기 ──
+  useCurtain: false,  // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
 
-  // ── 2. 메인 (히어로) ──
+  // ── 메인 (히어로) ──
   groom: {
-    name: "신랑",
-    nameEn: "Groom",
-    father: "아버지",
-    mother: "어머니",
+    name: "서은덕",
+    nameEn: "서은덕",
+    father: "서동현",
+    mother: "김혜숙",
     fatherDeceased: false,
     motherDeceased: false
   },
 
   bride: {
-    name: "신부",
-    nameEn: "Bride",
-    father: "아버지",
-    mother: "어머니",
+    name: "정세은",
+    nameEn: "정세은",
+    father: "정재복",
+    mother: "김지영",
     fatherDeceased: false,
     motherDeceased: false
   },
 
   wedding: {
-    date: "2026-05-09",
+    date: "2026-07-04",
     time: "13:00",
-    venue: "예식장 이름",
-    hall: "그랜드홀 5층",
-    address: "서울특별시 강남구 테헤란로 123",
-    tel: "02-1234-5678"
+    venue: "라비에벨웨딩홀",
+    hall: "로비",
+    address: "대전 서구 계백로 1108",
+    tel: "0507-1479-6868",
+    mapLinks: {
+      kakao: "https://place.map.kakao.com/1121045343",
+      naver: "https://map.naver.com/p/search/%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8%EC%9B%A8%EB%94%A9%ED%99%80%20%EB%8C%80%EC%A0%84/place/1192910552?c=15.00,0,0,0,dh&placePath=/home?bk_query=%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8%EC%9B%A8%EB%94%A9%ED%99%80%20%EB%8C%80%EC%A0%84&entry=pll&from=map&fromPanelNum=2&timestamp=202603292123&locale=ko&svcName=map_pcv5&searchText=%EB%9D%BC%EB%B9%84%EC%97%90%EB%B2%A8%EC%9B%A8%EB%94%A9%ED%99%80%20%EB%8C%80%EC%A0%84"
+    }
   },
 
-  // ── 3. 인사말 ──
+  // ── 인사말 ──
   greeting: {
     title: "소중한 분들을 초대합니다",
     content: "서로 다른 길을 걸어온 두 사람이\n이제 같은 길을 함께 걸어가려 합니다.\n\n저희의 새로운 시작을\n축복해 주시면 감사하겠습니다."
   },
 
-  // ── 4. 우리의 이야기 ──
+  // ── 우리의 이야기 ──
   story: {
     title: "우리의 이야기",
     content: "서로 다른 길을 걷던 두 사람이\n하나의 길을 함께 걷게 되었습니다.\n\n여러분을 소중한 자리에 초대합니다."
   },
 
-  // ── 5. 오시는 길 ──
-  mapLinks: {
-    kakao: "https://map.kakao.com/",
-    naver: "https://map.naver.com/"
-  },
+  // ── 오시는 길 ──
+  // (mapLinks는 wedding 객체 내에 포함)
 
-  // ── 6. 마음 전하실 곳 ──
+  // ── 마음 전하실 곳 ──
   accounts: {
     groom: [
       { role: "신랑", name: "홍길동", bank: "국민은행", number: "000-000-000000" },
@@ -78,7 +79,7 @@ const CONFIG = {
 
   // ── 링크 공유 시 나타나는 문구 ──
   meta: {
-    title: "신랑 ♥ 신부 결혼합니다",
-    description: "2026년 5월 9일, 소중한 분들을 초대합니다."
+    title: "서은덕 ♥ 정세은 결혼합니다",
+    description: "2026년 7월 4일, 소중한 분들을 초대합니다."
   }
 };
