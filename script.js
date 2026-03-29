@@ -135,6 +135,15 @@
     const btn = $('#curtainBtn');
     const namesEl = $('#curtainNames');
     const bgm = $('#bgm');
+    let bgmPlayAttempted = false;
+
+    function tryPlayBgm() {
+      if (!bgm || bgmPlayAttempted) return;
+      bgmPlayAttempted = true;
+      bgm.play().catch(() => {
+        bgmPlayAttempted = false;
+      });
+    }
 
     if (CONFIG.useCurtain === false) {
       curtain.style.display = 'none';
@@ -144,10 +153,10 @@
 
     namesEl.textContent = `${CONFIG.groom.name}  &  ${CONFIG.bride.name}`;
 
+    btn.addEventListener('pointerdown', tryPlayBgm);
+    btn.addEventListener('touchend', tryPlayBgm, { passive: true });
     btn.addEventListener('click', () => {
-      if (bgm) {
-        bgm.play().catch(() => {});
-      }
+      tryPlayBgm();
       curtain.classList.add('is-open');
       document.body.classList.remove('no-scroll');
       setTimeout(() => {
