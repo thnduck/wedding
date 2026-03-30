@@ -38,7 +38,7 @@ const CONFIG = {
   wedding: {
     date: "2026-07-04",
     time: "13:00",
-    venue: "라비에벨웨딩홀",
+    venue: "대전 라비에벨 웨딩홀",
     hall: "2층",
     address: "대전 서구 계백로 1108",
     tel: "0507-1479-6868",
