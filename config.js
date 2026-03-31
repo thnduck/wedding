@@ -100,7 +100,7 @@ const CONFIG = {
   // ── 링크 공유 시 나타나는 문구 ──
   meta: {
     title: "서은덕 ♥ 정세은 결혼합니다",
-    description: "2026년 7월 4일, 소중한 분들을 초대합니다."
-    image: "https://thnduck.github.io/wedding/images/og/1_v2.jpg"
+    description: "2026년 7월 4일, 소중한 분들을 초대합니다.",
+    image: "https://thnduck.github.io/wedding/images/og/1.jpg"
   }
 };
